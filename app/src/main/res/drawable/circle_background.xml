@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Background color of the circle -->
+    <solid android:color="@android:color/white"/>
+
+    <!-- Optional border (stroke) for the circle -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/darker_gray" />
+
+    <!-- Size of the circle (you can also set this in the ImageView directly) -->
+    <size
+        android:width="64dp"
+        android:height="64dp" />
+
+    <!-- Optional padding inside the circle -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>

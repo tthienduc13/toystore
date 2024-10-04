@@ -1,9 +1,9 @@
 package com.example.toystore;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.toolbar.findViewById(R.id.menu_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (drawer.isDrawerOpen(Gravity.START)) {
-                    drawer.closeDrawer(Gravity.START);
+                if (drawer.isDrawerOpen(GravityCompat.END)) {
+                    drawer.closeDrawer(GravityCompat.END);
                 } else {
-                    drawer.openDrawer(Gravity.START);
+                    drawer.openDrawer(GravityCompat.END);
                 }
             }
         });
