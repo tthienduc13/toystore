@@ -1,16 +1,24 @@
 package com.example.toystore;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
 import com.example.toystore.databinding.ActivityMainBinding;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://toystore.azurewebsites.net/api")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
         // Inflate the layout using View Binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -50,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.toolbar.findViewById(R.id.menu_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (drawer.isDrawerOpen(Gravity.START)) {
-                    drawer.closeDrawer(Gravity.START);
+                if (drawer.isDrawerOpen(GravityCompat.END)) {
+                    drawer.closeDrawer(GravityCompat.END);
                 } else {
-                    drawer.openDrawer(Gravity.START);
+                    drawer.openDrawer(GravityCompat.END);
                 }
             }
         });
