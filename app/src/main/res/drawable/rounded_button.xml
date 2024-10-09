@@ -1,9 +1,18 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/white" />
-    <stroke
-        android:width="4dp"
-        android:color="@color/black"
-        android:dashWidth="8dp"
-        android:dashGap="0dp" />
-    <corners android:radius="24dp" />
-</shape>
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Set your desired background color here -->
+            <corners android:radius="56dp" /> <!-- Rounded corners, adjust radius as needed -->
+        </shape>
+    </item>
+
+    <!-- Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="3dp" android:color="@color/black" /> <!-- Set border thickness and color -->
+            <corners android:radius="56dp" /> <!-- Match the radius to the background shape -->
+        </shape>
+    </item>
+</layer-list>

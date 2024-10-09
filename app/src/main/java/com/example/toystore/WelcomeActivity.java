@@ -8,6 +8,6 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome); // Make sure this points to the correct layout file
+        setContentView(R.layout.register); // Make sure this points to the correct layout file
     }
 }
