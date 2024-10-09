@@ -2,15 +2,23 @@ package com.example.toystore;
 
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
 import com.example.toystore.databinding.ActivityMainBinding;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://toystore.azurewebsites.net/api")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
         // Inflate the layout using View Binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
