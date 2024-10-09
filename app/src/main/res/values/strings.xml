@@ -19,6 +19,7 @@
     <string name="search">Search</string>
 
 <!--    landing-->
+    <string name="appName">WonderLands</string>
         <string name="image_description">Description of the image</string>
         <string name="shop_now">Shop Now</string>
     <string name="welcome">Welcome</string>
@@ -34,6 +35,8 @@
     <string name="remember">Remember me</string>
 <!--    register -->
     <string name="register">REGISTER</string>
+    <string name="started">Get started with WonderLands</string>
+    <string name="registerSlogan">Welcome to our store! Get your favorite toys</string>
     <string name="email">Email</string>
     <string name="emailAddress">Email Address</string>
     <string name="enterUserName">Enter your username</string>
